@@ -6,14 +6,14 @@
     "npm": "6.12.0"
   },
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
     "start": "node server",
     "server": "nodemon server",
-    "client": "npm start --prefixm client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
@@ -28,10 +28,12 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.9.10"
+    "googleapis": "^58.0.0",
+    "nodemailer": "^6.4.11"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
+    "mongoose": "^5.9.25",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.4"
   }

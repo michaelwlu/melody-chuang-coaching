@@ -4,12 +4,37 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 html {
   overflow-y: scroll;
 }
-=======
-@import url('https://fonts.googleapis.com/css2?family=Ramaraja&display=swap');
->>>>>>> c1410567d5bb6d0c167d41962a7b9ca81117c8b9
+
+.fb_hidden
+  .fb_dialog
+  .fb_dialog_padding
+  .fb_dialog_mobile
+  #fb-root
+  #fb_dialog_ipad_overlay
+  .fb-group
+  .fb_iframe_widget
+  .fb_iframe_widget_fluid
+  .fb_iframe_widget_lift {
+  z-index: -1 !important;
+}
+
+.animate-underline {
+  @apply relative no-underline;
+}
+
+.animate-underline::before {
+  content: '';
+  height: 1.5px;
+  transform: scaleX(0);
+  @apply absolute bottom-0 left-0 invisible w-full transition-all duration-200 ease-in-out bg-themeBlue;
+}
+
+.animate-underline:hover::before {
+  transform: scaleX(1);
+  @apply visible;
+}

@@ -1,7 +1,14 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   purge: [],
   theme: {
     extend: {
+      colors: {
+        themeBlue: '#7DB4E6',
+        themePink: '#CF689C',
+        themePurple: '#C991D8',
+      },
       width: {
         '1/7': '14.2857143%',
         '2/7': '28.5714286%',
@@ -40,9 +47,64 @@ module.exports = {
         '128': '32rem',
         '136': '34rem',
         '144': '36rem',
+        sm: '8px',
+        md: '16px',
+        lg: '24px',
+        xl: '48px',
+      },
+      opacity: {
+        '10': '.1',
+        '20': '.2',
+        '30': '.3',
+        '40': '.4',
+        '50': '.5',
+        '60': '.6',
+        '70': '.7',
+        '80': '.8',
+        '90': '.9',
+      },
+      scale: {
+        '99': '.99',
+        '101': '1.01',
+      },
+      inset: {
+        sm: '2px',
       },
     },
   },
-  variants: {},
-  plugins: [require('@tailwindcss/custom-forms')],
+  variants: {
+    backgroundColor: [
+      'responsive',
+      'hover',
+      'focus',
+      'focus-visible',
+      'active',
+    ],
+    textColor: ['responsive', 'hover', 'focus', 'focus-visible', 'active'],
+    backgroundOpacity: [
+      'responsive',
+      'hover',
+      'focus',
+      'focus-visible',
+      'active',
+    ],
+    padding: ['responsive', 'hover', 'focus', 'focus-visible', 'active'],
+    margin: ['responsive', 'hover', 'focus', 'focus-visible', 'active'],
+    borderRadius: ['responsive', 'hover', 'focus', 'focus-visible', 'active'],
+    borderOpacity: ['responsive', 'hover', 'focus', 'focus-visible', 'active'],
+    opacity: ['responsive', 'hover', 'focus'],
+    inset: ['responsive', 'hover', 'focus'],
+  },
+  plugins: [
+    require('@tailwindcss/custom-forms'),
+    plugin(function ({ addVariant, e }) {
+      addVariant('focus-visible', ({ modifySelectors, separator }) => {
+        modifySelectors(({ className }) => {
+          return `.${e(
+            `focus-visible${separator}${className}`
+          )}[data-focus-visible-added]`;
+        });
+      });
+    }),
+  ],
 };

@@ -1,15 +1,18 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
 // create schema for contact
-const ContactSchema = new Schema({
-  name: {
+const ContactSchema = new mongoose.Schema({
+  firstName: {
     type: String,
-    required: [true, 'Please provide your name'],
+    required: [true, 'Please enter your first name'],
+  },
+  lastName: {
+    type: String,
+    required: [true, 'Please enter your last name'],
   },
   email: {
     type: String,
-    required: [true, 'Please provide your email'],
+    required: [true, 'Please enter your email'],
   },
   message: {
     type: String,

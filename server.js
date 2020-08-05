@@ -10,12 +10,14 @@ dotenv.config({ path: './config/config.env' });
 // Start MongoDB connection
 connectDB();
 
-const router = require('./routes/api'); // import router
+// Import routers
+const contactRouter = require('./routes/ContactAPI');
+const applicationRouter = require('./routes/ApplicationAPI');
 
 const app = express();
 
 // Enable CORS
-/*app.use((req, res, next) => {
+app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header(
     'Access-Control-Allow-Headers',
@@ -23,12 +25,13 @@ const app = express();
   );
   next();
 });
-*/
+
 // Express body parser middleware
 app.use(express.json());
 
 // Set API routes
-app.use('/api/contact', router);
+app.use('/api/contact', contactRouter);
+app.use('/api/application', applicationRouter);
 
 // Use morgan if in development
 if (process.env.NODE_ENV === 'development') {

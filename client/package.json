@@ -1,17 +1,20 @@
 {
-  "name": "client",
+  "name": "melodychuang.com-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "focus-visible": "^5.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-facebook": "^8.1.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "react-spring": "^8.0.27",
-    "styled-components": "^5.1.1"
+    "uuid": "^8.2.0"
   },
   "scripts": {
     "start": "npm run watch-css && react-scripts start",
@@ -20,9 +23,6 @@
     "eject": "react-scripts eject",
     "build-css": "postcss src/styles/tailwind.css -o src/styles/styles.css",
     "watch-css": "postcss src/styles/tailwind.css -o src/styles/styles.css"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -41,5 +41,6 @@
     "autoprefixer": "^9.8.5",
     "postcss-cli": "^7.1.1",
     "tailwindcss": "^1.5.1"
-  }
+  },
+  "proxy": "http://localhost:5000"
 }
