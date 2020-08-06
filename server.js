@@ -1,10 +1,10 @@
 const express = require('express');
-const dotenv = require('dotenv'); // allow global variables
 const path = require('path');
+const dotenv = require('dotenv');
 const morgan = require('morgan');
 const connectDB = require('./config/db'); // mongodb connection
 
-// Utilize variables in config file
+// Configure global env variables
 dotenv.config({ path: './config/config.env' });
 
 // Start MongoDB connection
