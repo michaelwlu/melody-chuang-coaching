@@ -104,8 +104,8 @@ const Home = () => {
         </div>
         <section className="mx-auto my-12 text-center font-themeSans">
           <p>Follow @IAmMelodyChuang on Instagram</p>
-          <InstagramEmbed />
         </section>
+        <InstagramEmbed />
       </main>
     </div>
   );
