@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import React, { useContext, useEffect } from 'react';
+import { NavLink, withRouter } from 'react-router-dom';
 import LogoHorizontal from '../../assets/Horizontal-Name.png';
 import LogoVertical from '../../assets/Vertical-Name.png';
 import CollapseMenu from './CollapseMenu';
@@ -14,14 +14,14 @@ const Navbar = () => {
     <>
       {/* Navbar container */}
       <div className="relative z-40 w-full bg-white border-b">
-        <nav className="flex items-center justify-between w-11/12 max-w-5xl px-1 py-3 mx-auto text-sm text-black md:w-full md:justify-around md:px-5 md:py-6 lg:text-base font-themeSans">
+        <nav className="flex items-end justify-between w-full max-w-5xl py-3 pl-6 pr-4 mx-auto text-sm text-black md:justify-around md:px-5 md:py-6 lg:text-base font-themeSans">
           <div className="items-center justify-around hidden mt-2 md:flex w-2/9">
             <NavLinkButton linkProps={navList[0]} />
             <NavLinkButton linkProps={navList[1]} />
           </div>
 
           <div className="hidden px-2 mx-2 md:flex w-4/9 lg:w-5/9">
-            <Link
+            <NavLink
               to="/"
               className="relative top-0 mx-auto transition-all duration-300 focus:outline-none hover:top-sm"
             >
@@ -30,7 +30,7 @@ const Navbar = () => {
                 src={LogoHorizontal}
                 alt="Melody Chuang, Certified Life Coach"
               />
-            </Link>
+            </NavLink>
           </div>
 
           <div className="items-center justify-around hidden mt-2 md:flex w-2/9">
@@ -39,22 +39,22 @@ const Navbar = () => {
           </div>
 
           <div className="flex w-20 px-1 md:hidden">
-            <Link to="/" className="m-auto focus:outline-none">
+            <NavLink to="/" className="m-auto focus:outline-none">
               <img
                 className="w-full"
                 src={LogoVertical}
                 alt="Melody Chuang, Certified Life Coach"
               />
-            </Link>
+            </NavLink>
           </div>
 
           <div className="inline-block md:hidden">
             <button
               onClick={toggleNav}
-              className="flex items-center my-2 rounded hover:text-themeBlue focus:outline-none"
+              className="px-2 py-2 rounded hover:text-themeBlue focus:outline-none"
             >
               <svg
-                className="w-6 h-6"
+                className="w-8 h-8"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"

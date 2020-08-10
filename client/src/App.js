@@ -10,6 +10,7 @@ import Contact from './components/Contact/Contact';
 import ContactSuccess from './components/Contact/ContactSuccess';
 import Apply from './components/Apply/Apply';
 import ApplicationSuccess from './components/Apply/ApplicationSuccess';
+import PrivacyPolicy from './components/PrivacyPolicy';
 import ScrollToTop from './components/utilities/ScrollToTop';
 import './styles/styles.css';
 import '../node_modules/focus-visible/dist/focus-visible.min.js';
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/contact-success" component={ContactSuccess} />
           <Route path="/apply" component={Apply} />
           <Route path="/application-success" component={ApplicationSuccess} />
+          <Route path="/privacy" component={PrivacyPolicy} />
         </Switch>
         <Footer />
       </BrowserRouter>

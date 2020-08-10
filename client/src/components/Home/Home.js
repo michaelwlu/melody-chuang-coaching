@@ -1,6 +1,7 @@
 import React from 'react';
 import ApplyButton from './ApplyButton';
 import Photo from '../../assets/Photo.jpg';
+import InstagramEmbed from './InstagramEmbed';
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
         alt=""
         className="object-cover w-full h-64 mx-auto md:h-128"
       />
-      <main className="max-w-5xl px-4 mx-auto md:px-8 font-themeSerif">
+      <main className="max-w-5xl px-4 mx-auto mb-32 md:px-8 font-themeSerif">
         <div className="pt-8 pb-8 mx-auto text-center">
           <h1 className="mb-6 text-3xl font-semibold lg:text-4xl">
             Your bs-free, paradigm-shifting, shadow-busting mindset coach
@@ -103,7 +104,7 @@ const Home = () => {
         </div>
         <section className="mx-auto my-12 text-center font-themeSans">
           <p>Follow @IAmMelodyChuang on Instagram</p>
-          <p>Instagram Embed</p>
+          <InstagramEmbed />
         </section>
       </main>
     </div>
