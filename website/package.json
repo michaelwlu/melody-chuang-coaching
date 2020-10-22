@@ -1,0 +1,24 @@
+{
+  "name": "melodychuangcoaching",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "next": "9.5.5",
+    "react": "17.0.0",
+    "react-dom": "17.0.0",
+    "react-facebook": "^8.1.4",
+    "uuid": "^8.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "@tailwindcss/ui": "^0.6.2",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.9.5"
+  }
+}
