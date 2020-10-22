@@ -10,19 +10,6 @@ html {
   overflow-y: scroll;
 }
 
-.fb_hidden
-  .fb_dialog
-  .fb_dialog_padding
-  .fb_dialog_mobile
-  #fb-root
-  #fb_dialog_ipad_overlay
-  .fb-group
-  .fb_iframe_widget
-  .fb_iframe_widget_fluid
-  .fb_iframe_widget_lift {
-  z-index: -1 !important;
-}
-
 .animate-underline {
   @apply relative no-underline;
 }
@@ -31,7 +18,7 @@ html {
   content: '';
   height: 1.5px;
   transform: scaleX(0);
-  @apply absolute bottom-0 left-0 invisible w-full transition-all duration-200 ease-in-out bg-themeBlue;
+  @apply absolute bottom-0 left-0 invisible w-full transition-all duration-200 ease-in-out bg-themeblue;
 }
 
 .animate-underline:hover::before {

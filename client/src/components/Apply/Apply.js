@@ -106,7 +106,7 @@ const Apply = () => {
                 maxLength={10000}
                 value={application[question.label].response}
                 onChange={updateResponse}
-                className="block w-full mt-4 text-sm bg-gray-100 border-opacity-50 border-themeBlue form-textarea lg:text-base"
+                className="block w-full mt-4 text-sm bg-gray-100 border-opacity-50 border-themeblue form-textarea lg:text-base"
                 rows="4"
               />
             </label>

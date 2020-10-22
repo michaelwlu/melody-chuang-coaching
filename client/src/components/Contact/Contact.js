@@ -82,7 +82,7 @@ const Contact = () => {
             maxLength={10000}
             value={contactInfo.message}
             onChange={updateField}
-            className="block w-full mt-2 text-sm bg-gray-100 border-opacity-50 border-themeBlue form-textarea lg:text-base"
+            className="block w-full mt-2 text-sm bg-gray-100 border-opacity-50 border-themeblue form-textarea lg:text-base"
             rows="6"
           />
         </div>

@@ -102,10 +102,20 @@ const Home = () => {
         <div className="text-center">
           <ApplyButton buttonText={'Apply for a free consultation'} />
         </div>
-        <section className="mx-auto my-12 text-center font-themeSans">
-          <p>Follow @IAmMelodyChuang on Instagram</p>
+        <section className="mx-auto my-16 text-center font-themeSans">
+          <p className="mb-6 text-base font-bold font-themeSerif lg:text-xl">
+            Follow{' '}
+            <a
+              href="https://www.instagram.com/iammelodychuang/"
+              title="IAmMelodyChuang on Instagram"
+              className="text-blue-500 transition-all duration-100 hover:text-blue-700"
+            >
+              @IAmMelodyChuang
+            </a>{' '}
+            on Instagram
+          </p>
+          <InstagramEmbed />
         </section>
-        <InstagramEmbed />
       </main>
     </div>
   );

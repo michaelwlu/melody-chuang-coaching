@@ -9,7 +9,7 @@ const Podcast = () => {
         width="100%"
         height="232"
         frameBorder="0"
-        allowtransparency="true"
+        allowTransparency="true"
         allow="encrypted-media"
       ></iframe>
       <p className="mt-8 text-sm lg:text-base">

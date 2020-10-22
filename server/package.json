@@ -2,19 +2,15 @@
   "name": "melodychuang.com",
   "version": "1.0.0",
   "engines": {
-    "node": "12.13.0",
-    "npm": "6.12.0"
+    "node": ">=12.13.0",
+    "npm": ">=6.12.0"
   },
   "description": "",
   "main": "server.js",
   "scripts": {
-    "client-install": "npm install --prefix client",
     "start": "node server",
     "server": "nodemon server",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run client\" \"npm run server\"",
-    "config-heroku": "heroku config:push -o -f config/config.env",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "config-heroku": "heroku config:push -o -f config/config.env"
   },
   "repository": {
     "type": "git",
@@ -27,6 +23,7 @@
   },
   "homepage": "https://github.com/michaelwlu/melodychuang.com#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "googleapis": "^58.0.0",
@@ -34,7 +31,6 @@
     "nodemailer": "^6.4.11"
   },
   "devDependencies": {
-    "concurrently": "^5.2.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.4"
   }

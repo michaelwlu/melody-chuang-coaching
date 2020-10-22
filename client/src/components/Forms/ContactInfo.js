@@ -17,12 +17,12 @@ const ContactInfo = ({ info, updateField, showIcons, requireAll }) => {
             onChange={updateField}
             className={`block w-full ${
               showIcons ? 'pl-10' : ''
-            } mt-2 text-sm bg-gray-100 border-themeBlue border-opacity-50  form-input lg:text-base z-0`}
+            } mt-2 text-sm bg-gray-100 border-themeblue border-opacity-50  form-input lg:text-base z-0`}
           />
           {showIcons && (
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <svg
-                className="w-5 h-5 opacity-75 text-themeBlue"
+                className="w-5 h-5 opacity-75 text-themeblue"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -51,12 +51,12 @@ const ContactInfo = ({ info, updateField, showIcons, requireAll }) => {
             onChange={updateField}
             className={`block w-full ${
               showIcons ? 'pl-10' : ''
-            } mt-2 text-sm bg-gray-100 border-themeBlue border-opacity-50  form-input lg:text-base`}
+            } mt-2 text-sm bg-gray-100 border-themeblue border-opacity-50  form-input lg:text-base`}
           />
           {showIcons && (
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <svg
-                className="w-5 h-5 opacity-75 text-themeBlue"
+                className="w-5 h-5 opacity-75 text-themeblue"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -85,12 +85,12 @@ const ContactInfo = ({ info, updateField, showIcons, requireAll }) => {
             onChange={updateField}
             className={`block w-full ${
               showIcons ? 'pl-10' : ''
-            } mt-2 text-sm bg-gray-100 border-themeBlue border-opacity-50 md:w-88 form-input lg:text-base`}
+            } mt-2 text-sm bg-gray-100 border-themeblue border-opacity-50 md:w-88 form-input lg:text-base`}
           />
           {showIcons && (
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <svg
-                className="w-5 h-5 opacity-75 text-themeBlue"
+                className="w-5 h-5 opacity-75 text-themeblue"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
