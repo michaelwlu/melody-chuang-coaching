@@ -1,10 +1,14 @@
 import React from 'react';
+import Head from 'next/head';
 import Layout from '../components/Layout';
 import StyleLink from '../components/StyleLink';
 
 const PrivacyPolicy = () => {
   return (
     <Layout>
+      <Head>
+        <title>Privacy Policy | Melody Chuang Coaching</title>
+      </Head>
       <main className="relative w-11/12 max-w-md mx-auto mt-10 mb-32 space-y-4 md:max-w-xl lg:max-w-2xl md:mt-12">
         <h1 className="text-2xl italic font-semibold lg:text-3xl font-themeSerif">
           Privacy Policy for Melody Chuang Coaching

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Head from 'next/head';
 import Layout from '../components/Layout';
 import { v4 as uuidv4 } from 'uuid';
 import ContactInfo from '../components/forms/ContactInfo';
@@ -66,6 +67,9 @@ const Contact = () => {
 
   return (
     <Layout>
+      <Head>
+        <title>Contact | Melody Chuang Coaching</title>
+      </Head>
       <main className="relative w-11/12 max-w-md mx-auto mt-10 mb-32 md:max-w-xl lg:max-w-2xl md:mt-12">
         <h1 className="mb-6 text-3xl font-semibold leading-tight lg:text-4xl font-themeSerif">
           Let's chat - I wanna meet you!

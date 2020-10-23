@@ -1,11 +1,10 @@
-import React from 'react';
 import Head from 'next/head';
-import Layout from '../components/Layout';
+import React from 'react';
 import ApplyButton from '../components/Home/ApplyButton';
 import InstagramEmbed from '../components/Home/InstagramEmbed';
-import StyleLink from '../components/StyleLink';
+import Layout from '../components/Layout';
 
-export default function Home() {
+const Home = () => {
   return (
     <Layout>
       <Head>
@@ -114,4 +113,6 @@ export default function Home() {
       </main>
     </Layout>
   );
-}
+};
+
+export default Home;

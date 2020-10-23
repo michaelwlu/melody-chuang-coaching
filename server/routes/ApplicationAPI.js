@@ -5,7 +5,7 @@ const {
 } = require('../controllers/applicationControl');
 
 const applicationRouter = express.Router();
-applicationRouter.route('/').get(getApplication);
+// applicationRouter.route('/').get(getApplication);
 applicationRouter.route('/').post(addApplication);
 
 module.exports = applicationRouter;
