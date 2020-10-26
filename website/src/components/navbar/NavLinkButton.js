@@ -7,9 +7,9 @@ const NavLinkButton = ({ linkProps }) => {
       <a
         className={`${
           linkProps.highlight
-            ? 'inline-block px-2 py-1 ml-1 tracking-widest text-white bg-themeblue-900 rounded-md uppercase transform transition duration-200 ease-in-out hover:bg-themeblue-400 focus:bg-themeblue-400 hover:translate-y-px focus:translate-y-px'
-            : 'inline-block py-1 mx-2 tracking-widest uppercase animate-underline transform transition ease-in-out duration-200 hover:translate-y-px focus:translate-y-px'
-        } focus:outline-none`}
+            ? 'px-3 py-2 text-white bg-themeblue-900 hover:bg-themeblue-400 focus:bg-themeblue-400 '
+            : 'py-1 animate-underline'
+        } mx-2 leading-5 rounded-md uppercase transform transition ease-in-out duration-200 hover:translate-y-px focus:translate-y-px tracking-widest inline-block focus:outline-none`}
       >
         {linkProps.name}
       </a>

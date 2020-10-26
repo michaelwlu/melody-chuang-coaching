@@ -29,9 +29,6 @@ exports.getContact = async (req, res, next) => {
 // @access	Public
 exports.addContact = async (req, res, next) => {
   try {
-    // Destructure parsed body
-    const { firstName, lastName, email, message } = req.body;
-
     // Use request body on Contact model
     const contact = await Contact.create(req.body);
 

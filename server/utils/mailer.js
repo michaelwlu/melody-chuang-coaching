@@ -1,5 +1,10 @@
 const nodemailer = require('nodemailer');
-const { contactFormat, applicationFormat } = require('./emailFormatter');
+const {
+  mainContactFormat,
+  clientContactFormat,
+  mainApplicationFormat,
+  clientApplicationFormat,
+} = require('./emailFormatter');
 
 async function mailer(type, body) {
   try {
@@ -19,33 +24,59 @@ async function mailer(type, body) {
 
     let transporter = nodemailer.createTransport(gmailTransportConfig);
 
-    let mailOptions = {
+    let mainHeaders = {
       from: process.env.GMAIL_USER,
       to: process.env.GMAIL_USER,
     };
 
-    let mailTypeOptions =
+    let clientHeaders = {
+      from: `Melody <${process.env.GMAIL_USER}>`,
+      to: body.email,
+    };
+
+    let mainConfig =
       type === 'contact'
         ? {
             subject: 'New Contact Request',
-            html: contactFormat(body),
+            html: mainContactFormat(body),
           }
         : type === 'application'
         ? {
             subject: 'New Application',
-            html: applicationFormat(body),
+            html: mainApplicationFormat(body),
           }
         : {
             subject: 'Unknown Error',
             text: 'Unknown Mailer Error',
           };
 
-    let info = await transporter.sendMail({
-      ...mailOptions,
-      ...mailTypeOptions,
-    });
+    let clientConfig =
+      type === 'contact'
+        ? {
+            subject: 'Thank you for your message!',
+            html: clientContactFormat(body),
+          }
+        : type === 'application'
+        ? {
+            subject: 'Your application has been received!',
+            html: clientApplicationFormat(body),
+          }
+        : {
+            subject: 'Unknown Error',
+            text: 'Unknown Mailer Error',
+          };
 
-    console.log(`Message sent: ${info.messageId}`);
+    let mainInfo = await transporter.sendMail({
+      ...mainHeaders,
+      ...mainConfig,
+    });
+    console.log(`Message sent: ${mainInfo.messageId}`);
+
+    let clientInfo = await transporter.sendMail({
+      ...clientHeaders,
+      ...clientConfig,
+    });
+    console.log(`Message sent: ${clientInfo.messageId}`);
   } catch (error) {
     console.error(`Mailer Error: ${error}`);
   }
