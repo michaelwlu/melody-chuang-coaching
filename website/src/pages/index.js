@@ -2,7 +2,9 @@ import Head from 'next/head';
 import React from 'react';
 import ApplyButton from '../components/Home/ApplyButton';
 import InstagramEmbed from '../components/Home/InstagramEmbed';
-import Layout from '../components/Layout';
+import ContactBox from '../components/forms/ContactBox';
+import Layout from '../components/utils/Layout';
+import WidthWrapper from '../components/utils/WidthWrapper';
 
 const Home = () => {
   return (
@@ -11,21 +13,22 @@ const Home = () => {
         <title>Home | Melody Chuang Coaching</title>
       </Head>
       <main className="mx-auto">
-        <img
-          src="/photo.jpg"
-          alt=""
-          className="object-cover w-full h-64 mx-auto md:h-128"
-        />
-        <div className="max-w-5xl px-4 mx-auto mb-32 md:px-8 font-themeSerif">
-          <div className="pt-8 pb-8 mx-auto text-center">
-            <h1 className="mb-6 text-3xl font-semibold lg:text-4xl">
-              Your bs-free, paradigm-shifting, shadow-busting mindset coach
-            </h1>
-            <ApplyButton buttonText={'Apply for a free consultation'} />
-          </div>
-          <div className="mt-32 mb-16 space-y-24 text-base lg:text-xl">
-            <section className="flex justify-start">
-              <div className="md:w-4/7">
+        <div
+          className="bg-center bg-no-repeat bg-cover h-50s md:h-60s md:bg-cover"
+          style={{ 'background-image': "url('/m90.jpg')" }}
+        ></div>
+        <div className="mx-auto font-themeSerif">
+          <WidthWrapper>
+            <div className="pt-8 pb-8 mx-auto text-center">
+              <h1 className="mb-6 text-3xl font-semibold lg:text-4xl">
+                Your bs-free, paradigm-shifting, shadow-busting mindset coach
+              </h1>
+              <ApplyButton buttonText={'Apply for a free consultation'} />
+            </div>
+          </WidthWrapper>
+          <div className="w-full max-w-5xl mx-auto mt-20 mb-16 text-base md:mb-20 md:px-6 md:mt-32 md:space-y-28 lg:text-xl">
+            <section className="flex flex-col items-center justify-between space-x-0 space-y-12 md:flex-row md:space-x-12 md:space-y-0">
+              <div className="px-6 md:px-0 md:w-4/7">
                 <h1 className="mb-6 text-2xl font-semibold lg:text-3xl">
                   Do you daydream about a life where…
                 </h1>
@@ -52,9 +55,17 @@ const Home = () => {
                   </p>
                 </div>
               </div>
+              <div
+                className="w-full mx-auto bg-center bg-no-repeat bg-cover md:shadow-sm h-80 md:w-3/7 md:h-112 lg:h-136 md:bg-cover"
+                style={{ 'background-image': "url('/m84.jpg')" }}
+              ></div>
             </section>
-            <section className="flex justify-end space-y-6">
-              <div className="md:w-4/7">
+            <section className="flex flex-col items-center justify-between space-x-0 space-y-12 md:flex-row md:space-x-12 md:space-y-0">
+              <div
+                className="w-full mx-auto bg-top bg-no-repeat bg-cover md:shadow-sm h-80 md:w-3/7 md:h-72 lg:h-88 md:bg-cover"
+                style={{ 'background-image': "url('/m41.jpg')" }}
+              ></div>
+              <div className="px-6 space-y-4 md:px-0 md:w-4/7">
                 <p className="font-bold">
                   My name is Melody Chuang, and I help women rewire their brains
                   and nervous systems to free themselves from the shackles of
@@ -69,8 +80,8 @@ const Home = () => {
                 </p>
               </div>
             </section>
-            <section className="flex justify-start space-y-6 md:pl-3">
-              <div className="md:w-4/7">
+            <section className="flex flex-col items-center justify-between space-x-0 space-y-12 md:flex-row md:space-x-12 md:space-y-0">
+              <div className="px-6 mt-16 space-y-4 md:mt-0 md:px-0 md:w-4/7">
                 <p className="font-bold">
                   I am a Certified Life Coach and Breathwork Facilitator. But
                   let’s be real, my credentials are not what is important here.
@@ -88,9 +99,17 @@ const Home = () => {
                   where you can truly call yourself your best friend.
                 </p>
               </div>
+              <div
+                className="w-full mx-auto bg-left bg-no-repeat bg-cover md:shadow-sm h-80 md:w-3/7 md:h-80 lg:h-104 md:bg-cover"
+                style={{ 'background-image': "url('/m31.jpg')" }}
+              ></div>
             </section>
-            <section className="flex justify-end space-y-6">
-              <div className="md:w-4/7">
+            <section className="flex flex-col items-center justify-between space-x-0 space-y-12 md:flex-row md:space-x-12 md:space-y-0">
+              <div
+                className="w-full mx-auto bg-center bg-no-repeat bg-cover md:shadow-sm h-80 md:w-3/7 md:h-72 lg:h-96 md:bg-cover"
+                style={{ 'background-image': "url('/m73.jpg')" }}
+              ></div>
+              <div className="px-6 space-y-4 md:px-0 md:w-4/7">
                 <p className="font-bold">
                   When you work with me, you become the master of your life, and
                   not the other way around.
@@ -108,9 +127,12 @@ const Home = () => {
           <div className="text-center">
             <ApplyButton buttonText={'Apply for a free consultation'} />
           </div>
-          <InstagramEmbed />
+          <WidthWrapper>
+            <InstagramEmbed />
+          </WidthWrapper>
         </div>
       </main>
+      <ContactBox />
     </Layout>
   );
 };

@@ -6,6 +6,11 @@ module.exports = {
   purge: [],
   theme: {
     extend: {
+      height: {
+        '50s': '50vh',
+        '60s': '60vh',
+        '70s': '70vh',
+      },
       colors: {
         themeblue: {
           50: '#e2f4ff',

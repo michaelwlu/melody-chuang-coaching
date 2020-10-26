@@ -1,77 +1,89 @@
 import React from 'react';
 
-const ContactInfo = ({ info, updateField, showIcons, requireAll }) => {
+const ContactInfo = ({
+  info,
+  updateField,
+  showIcons,
+  requireAll,
+  isSmall = false,
+}) => {
   return (
-    <section className="pb-4">
-      <div className="block mt-4 align-top md:inline-block md:mr-4 md:w-64">
-        <label htmlFor="first-name">First Name</label>
-        <div className="relative">
-          <input
-            id="first-name"
-            type="text"
-            name="firstName"
-            autoComplete="given-name"
-            required={requireAll}
-            maxLength={300}
-            value={info.firstName}
-            onChange={updateField}
-            className={`block w-full ${
-              showIcons ? 'pl-10' : ''
-            } mt-2 text-sm bg-gray-100 border-themeblue-300 border-opacity-50  form-input lg:text-base z-0`}
-          />
-          {showIcons && (
-            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-              <svg
-                className="w-5 h-5 opacity-75 text-themeblue-300"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-              </svg>
-            </div>
-          )}
+    <section>
+      <div
+        className={`${
+          isSmall ? 'space-y-2' : 'space-y-4'
+        } flex flex-col space-x-0 md:space-y-0 md:flex-row md:space-x-4`}
+      >
+        <div className="w-full align-top md:w-1/2">
+          <label htmlFor="first-name">First Name</label>
+          <div className="relative">
+            <input
+              id="first-name"
+              type="text"
+              name="firstName"
+              autoComplete="given-name"
+              required={requireAll}
+              maxLength={300}
+              value={info.firstName}
+              onChange={updateField}
+              className={`${showIcons ? 'pl-10' : ''} ${
+                isSmall ? '' : 'lg:text-base'
+              } block w-full mt-2 text-sm bg-gray-100 border-themeblue-100 form-input z-0`}
+            />
+            {showIcons && (
+              <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <svg
+                  className="w-4 h-4 opacity-75 text-themeblue-200"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div className="w-full align-top md:w-1/2">
+          <label htmlFor="last-name">Last Name</label>
+          <div className="relative">
+            <input
+              id="last-name"
+              type="text"
+              name="lastName"
+              autoComplete="family-name"
+              required={requireAll}
+              maxLength={300}
+              value={info.lastName}
+              onChange={updateField}
+              className={`${showIcons ? 'pl-10' : ''} ${
+                isSmall ? '' : 'lg:text-base'
+              } block w-full mt-2 text-sm bg-gray-100 border-themeblue-100 form-input`}
+            />
+            {showIcons && (
+              <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <svg
+                  className="w-4 h-4 opacity-75 text-themeblue-200"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
-      <div className="block mt-4 align-top md:inline-block md:w-64">
-        <label htmlFor="last-name">Last Name</label>
-        <div className="relative">
-          <input
-            id="last-name"
-            type="text"
-            name="lastName"
-            autoComplete="family-name"
-            required={requireAll}
-            maxLength={300}
-            value={info.lastName}
-            onChange={updateField}
-            className={`block w-full ${
-              showIcons ? 'pl-10' : ''
-            } mt-2 text-sm bg-gray-100 border-themeblue-300 border-opacity-50  form-input lg:text-base`}
-          />
-          {showIcons && (
-            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-              <svg
-                className="w-5 h-5 opacity-75 text-themeblue-300"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-              </svg>
-            </div>
-          )}
-        </div>
-      </div>
-
-      <div className="block mt-4 md:mt-5">
+      <div className={`${isSmall ? 'mt-2' : 'mt-4'} w-full`}>
         <label htmlFor="email">Email</label>
         <div className="relative">
           <input
@@ -83,14 +95,14 @@ const ContactInfo = ({ info, updateField, showIcons, requireAll }) => {
             maxLength={300}
             value={info.email}
             onChange={updateField}
-            className={`block w-full ${
-              showIcons ? 'pl-10' : ''
-            } mt-2 text-sm bg-gray-100 border-themeblue-300 border-opacity-50 md:w-88 form-input lg:text-base`}
+            className={`${showIcons ? 'pl-10' : ''} ${
+              isSmall ? '' : 'lg:text-base'
+            } block w-full mt-2 text-sm bg-gray-100 border-themeblue-100 form-input`}
           />
           {showIcons && (
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <svg
-                className="w-5 h-5 opacity-75 text-themeblue-300"
+                className="w-4 h-4 opacity-75 text-themeblue-200"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"

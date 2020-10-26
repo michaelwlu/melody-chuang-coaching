@@ -1,19 +1,17 @@
 import React from 'react';
-import StyleLink from '../StyleLink';
+import StyledLink from '../utils/StyledLink';
 
 const InstagramEmbed = () => {
   return (
-    <section className="mx-auto my-32 text-center">
+    <section className="mx-auto my-20 text-center md:my-32">
       <p className="mb-6 text-base font-bold font-themeSerif lg:text-xl">
         Follow me on Instagram at{' '}
-        <StyleLink>
-          <a
-            href="https://www.instagram.com/iammelodychuang/"
-            title="IAmMelodyChuang on Instagram"
-          >
-            @IAmMelodyChuang
-          </a>
-        </StyleLink>
+        <StyledLink
+          href="https://www.instagram.com/iammelodychuang/"
+          title="IAmMelodyChuang on Instagram"
+        >
+          @IAmMelodyChuang
+        </StyledLink>
         !
       </p>
       <div className="max-w-sm mx-auto md:max-w-full">

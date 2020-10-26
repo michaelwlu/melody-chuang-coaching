@@ -29,9 +29,6 @@ exports.getApplication = async (req, res, next) => {
 // @access	Public
 exports.addApplication = async (req, res, next) => {
   try {
-    // Destructure parsed body
-    const { firstName, lastName, email, q1, q2, q3, q4, q5, q6 } = req.body;
-
     // Use request body on Contact model
     const application = await Application.create(req.body);
 

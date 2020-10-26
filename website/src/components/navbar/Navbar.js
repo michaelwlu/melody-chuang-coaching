@@ -20,7 +20,7 @@ const Navbar = () => {
 
           <div className="hidden px-2 mx-2 md:flex w-4/9 lg:w-5/9">
             <Link href="/" tabIndex={0}>
-              <a className="mx-auto transition duration-200 ease-in-out transform focus:outline-none hover:translate-y-px focus:translate-y-px">
+              <a className="mx-auto transition duration-200 ease-in-out transform focus:outline-none">
                 <img
                   className="w-full max-w-md"
                   src="/Horizontal-Name.png"
