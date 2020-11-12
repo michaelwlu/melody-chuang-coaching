@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import FBGroup from '../components/Community/FBGroup';
 import Podcast from '../components/Community/Podcast';
-import ContactBox from '../components/forms/ContactBox';
+import ContactSection from '../components/utils/ContactSection';
 import Layout from '../components/utils/Layout';
 import WidthWrapper from '../components/utils/WidthWrapper';
 
@@ -28,7 +28,7 @@ const Community = () => {
           </section>
         </main>
       </WidthWrapper>
-      <ContactBox />
+      <ContactSection />
     </Layout>
   );
 };

@@ -4,6 +4,7 @@ import CollapseMenu from './CollapseMenu';
 import { NavContext } from '../../context/ResponsiveNav';
 import NavLinkButton from './NavLinkButton';
 import navList from './navList';
+import Image from '../utils/Image';
 
 const Navbar = () => {
   const { isNavVisible, toggleNav } = useContext(NavContext);
@@ -21,9 +22,9 @@ const Navbar = () => {
           <div className="hidden px-2 mx-2 md:flex w-4/9 lg:w-5/9">
             <Link href="/" tabIndex={0}>
               <a className="mx-auto transition duration-200 ease-in-out transform focus:outline-none">
-                <img
-                  className="w-full max-w-md"
-                  src="/Horizontal-Name.png"
+                <Image
+                  src="hlogo.png"
+                  className="max-w-md"
                   alt="Melody Chuang, Certified Life Coach"
                 />
               </a>
@@ -38,9 +39,8 @@ const Navbar = () => {
           <div className="flex w-20 px-1 md:hidden">
             <Link href="/" tabIndex={0}>
               <a className="m-auto focus:outline-none">
-                <img
-                  className="w-full"
-                  src="/Vertical-Name.png"
+                <Image
+                  src="vlogo2.png"
                   alt="Melody Chuang, Certified Life Coach"
                 />
               </a>

@@ -69,51 +69,46 @@ const ContactBox = () => {
   };
 
   return (
-    <div className="w-full border-t">
-      <div className="max-w-xl px-6 pt-8 mx-auto md:pt-12">
-        <h1 className="text-xl font-semibold leading-tight lg:text-2xl font-themeSerif">
-          Contact Me
-        </h1>
-        <form
-          onSubmit={handleSubmit}
-          className="relative mt-4 font-sans text-sm"
-        >
-          <ContactInfo
-            info={{
-              firstName: contactInfo.firstName,
-              lastName: contactInfo.lastName,
-              email: contactInfo.email,
-            }}
-            updateField={updateField}
-            showIcons={true}
-            requireAll={requireAll}
-            isSmall={true}
+    <div className="flex-shrink w-full max-w-xl">
+      <h1 className="text-xl font-semibold leading-tight lg:text-2xl font-themeSerif">
+        Contact Me
+      </h1>
+      <form onSubmit={handleSubmit} className="relative mt-4 font-sans text-sm">
+        <ContactInfo
+          info={{
+            firstName: contactInfo.firstName,
+            lastName: contactInfo.lastName,
+            email: contactInfo.email,
+          }}
+          updateField={updateField}
+          showIcons={true}
+          requireAll={requireAll}
+          isSmall={true}
+        />
+        <div className="block mt-2 mb-4 md:mb-6">
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            required={requireAll}
+            maxLength={10000}
+            value={contactInfo.message}
+            onChange={updateField}
+            className="block w-full mt-2 text-sm bg-gray-100 border-opacity-50 border-themeblue-300 form-textarea"
+            rows="5"
           />
-          <div className="block mt-2 mb-4 md:mb-6">
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              required={requireAll}
-              maxLength={10000}
-              value={contactInfo.message}
-              onChange={updateField}
-              className="block w-full mt-2 text-sm bg-gray-100 border-opacity-50 border-themeblue-300 form-textarea"
-              rows="5"
-            />
-          </div>
-          <SubmitButton isLoading={isLoading} />
-          <div className="mt-3 text-xs text-red-700">
-            {contactError &&
-              contactError.map((msg, idx) => <p key={idx}>{msg}</p>)}
-          </div>
-        </form>
-        {contactSuccess ? (
-          <div className="mt-6 font-sans text-sm">
-            Thanks for your message! I'll be reaching out to you soon.
-          </div>
-        ) : null}
-      </div>
+        </div>
+        <SubmitButton isLoading={isLoading} />
+        <div className="mt-3 text-xs text-red-700">
+          {contactError &&
+            contactError.map((msg, idx) => <p key={idx}>{msg}</p>)}
+        </div>
+      </form>
+      {contactSuccess ? (
+        <div className="mt-6 font-sans text-sm">
+          Thanks for your message! I'll be reaching out to you soon.
+        </div>
+      ) : null}
     </div>
   );
 };
