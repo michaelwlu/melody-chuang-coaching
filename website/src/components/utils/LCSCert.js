@@ -12,7 +12,7 @@ const LCSCert = () => {
         <Image
           src="lcs-seal.png"
           alt="The Life Coach School"
-          className="transition duration-75 ease-in-out transform hover:scale-105"
+          className="transition duration-200 ease-in-out transform hover:translate-y-px focus:translate-y-px focus:outline-none"
         />
       </a>
     </div>
