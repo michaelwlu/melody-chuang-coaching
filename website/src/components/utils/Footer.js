@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="w-full px-6 mx-auto mt-24 mb-10 font-sans text-xs lg:text-sm">
+    <footer className="w-full px-6 mx-auto mt-24 mb-8 font-sans text-xs lg:text-sm">
       <div className="flex justify-center text-center">
         <span>
           ©2020 Melody Chuang Coaching |{' '}

@@ -85,7 +85,7 @@ const Apply = () => {
   };
 
   const successDisplay = (
-    <div className="mx-auto">
+    <div className="mx-auto text-center">
       <h1 className="mb-6 text-3xl italic font-semibold leading-tight lg:text-4xl font-themeSerif">
         Thank you for your application!
       </h1>

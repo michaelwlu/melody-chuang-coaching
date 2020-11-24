@@ -5,7 +5,7 @@ const mainContactFormat = ({
   message,
   createdAt,
 }) => {
-  return `<h3>You have a new contact request</h3>
+  return `<h3>You have a new contact request from Melody Chuang Coaching</h3>
 	<ul>
 	<li>First name: ${firstName}</li>
 	<li>Last name: ${lastName}</li>
@@ -41,7 +41,7 @@ const mainApplicationFormat = ({
   q5,
   q6,
 }) => {
-  return `<h3>You have a new application</h3>
+  return `<h3>You have a new application from Melody Chuang Coaching</h3>
 	<ul>
 	<li>First name: ${firstName}</li>
 	<li>Last name: ${lastName}</li>
