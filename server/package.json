@@ -1,0 +1,36 @@
+{
+  "name": "melodychuang.com",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=12.13.0",
+    "npm": ">=6.12.0"
+  },
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "config-heroku": "heroku config:push -o -f config/config.env"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelwlu/melodychuang.com.git"
+  },
+  "author": "Michael W. Lu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelwlu/melodychuang.com/issues"
+  },
+  "homepage": "https://github.com/michaelwlu/melodychuang.com#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.27",
+    "nodemailer": "^6.4.11"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
+  }
+}
