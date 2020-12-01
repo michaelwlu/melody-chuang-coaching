@@ -1,4 +1,4 @@
-<img src="./readme/banner-thin.png" alt="Banner">
+<img src="./readme/banner.png" alt="Banner">
 
 # Melody Chuang Coaching
 
