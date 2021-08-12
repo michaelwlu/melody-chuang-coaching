@@ -2,7 +2,7 @@
 
 # Melody Chuang Coaching
 
-Visit at: [melodychuang.com](https://melodychuang.com)
+Visit at: [melodychuangcoaching.com](https://melodychuangcoaching.com)
 
 ---
 
