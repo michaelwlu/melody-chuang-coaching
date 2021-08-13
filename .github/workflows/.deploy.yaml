@@ -1,0 +1,17 @@
+name: Push Server to Heroku
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Release Server
+        uses: https://github.com/AkhileshNS/heroku-deploy
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "melodychuang"
+          heroku_email: ${{secrets.HEROKU_API_KEY}}
+        env:
+          HD_APP_BASE: "website"
