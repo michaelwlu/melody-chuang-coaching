@@ -2,7 +2,9 @@
 
 # Melody Chuang Coaching
 
-Visit at: [melodychuangcoaching.com](https://melodychuangcoaching.com)
+~~Visit at [melodychuangcoaching.com](https://melodychuangcoaching.com)~~
+
+No longer active; please view archived version [here](https://melodychuangcoaching.michaelwenlu.com)
 
 ---
 
@@ -16,15 +18,15 @@ I created this website for my friend Melody's life coaching business. It was des
 
 ### Home
 
-<img src="./readme/home.gif?raw=true" width="600px" alt="Home">
+<img src="./readme/home_nofadein.gif?raw=true" width="600px" alt="Home">
 
 ### Widgets
 
-<img src="./readme/widgets.gif?raw=true" width="600px" alt="Widgets">
+<img src="./readme/widgets_nofadein.gif?raw=true" width="600px" alt="Widgets">
 
 ### Forms
 
-<img src="./readme/forms.gif?raw=true" width="600px" alt="Forms">
+<img src="./readme/forms_nofadein.gif?raw=true" width="600px" alt="Forms">
 
 ## 🤖 Versions
 
