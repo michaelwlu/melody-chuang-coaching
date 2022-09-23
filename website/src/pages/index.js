@@ -16,7 +16,7 @@ const Home = () => {
 				<div className="w-full overflow-hidden h-50s md:h-60s">
 					<Image src="m90.jpg" />
 				</div>
-				<div className="mx-auto font-themeSerif">
+				<div className="mx-auto mb-20 font-themeSerif">
 					<WidthWrapper>
 						<div className="pt-8 pb-8 mx-auto text-center">
 							<h1 className="mb-6 text-3xl font-semibold lg:text-4xl">
