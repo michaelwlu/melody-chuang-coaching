@@ -26,7 +26,7 @@
     "@tailwindcss/ui": "^0.6.2",
     "postcss-preset-env": "^6.7.0",
     "responsive-loader": "^2.2.0",
-    "sharp": "^0.30.5",
+    "sharp": "^0.32.6",
     "tailwindcss": "^1.9.5",
     "webp-loader": "^0.6.0"
   }
