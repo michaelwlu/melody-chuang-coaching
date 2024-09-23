@@ -1,8 +1,8 @@
 import Head from "next/head";
+import Image from "next/image";
 import React from "react";
 import ApplyButton from "../components/Home/ApplyButton";
 import ContactSection from "../components/utils/ContactSection";
-import Image from "../components/utils/Image";
 import Layout from "../components/utils/Layout";
 import WidthWrapper from "../components/utils/WidthWrapper";
 
@@ -13,8 +13,13 @@ const Home = () => {
 				<title>Home | Melody Chuang Coaching</title>
 			</Head>
 			<main className="mx-auto">
-				<div className="w-full overflow-hidden h-50s md:h-60s">
-					<Image src="m90.jpg" />
+				<div className="flex items-center justify-center w-full overflow-hidden h-50s md:h-60s">
+					<Image
+						src="/images/m90.jpg"
+						layout="responsive"
+						width="3360"
+						height="1950"
+					/>
 				</div>
 				<div className="mx-auto mb-20 font-themeSerif">
 					<WidthWrapper>
@@ -54,13 +59,18 @@ const Home = () => {
 									</p>
 								</div>
 							</div>
-							<div className="w-full mx-auto overflow-hidden md:shadow-sm h-80 md:w-3/7 md:h-112 lg:h-136">
-								<Image src="m84.jpg" />
+							<div className="relative w-full mx-auto overflow-hidden md:shadow-sm h-80 md:w-3/7 md:h-112 lg:h-136">
+								<Image src="/images/m84.jpg" layout="fill" objectFit="cover" />
 							</div>
 						</section>
 						<section className="flex flex-col items-center justify-between space-x-0 space-y-12 md:flex-row md:space-x-12 md:space-y-0">
-							<div className="w-full mx-auto overflow-hidden md:shadow-sm h-80 md:w-3/7 md:h-72 lg:h-88">
-								<Image src="m41.jpg" className="object-top" />
+							<div className="relative w-full mx-auto overflow-hidden md:shadow-sm h-80 md:w-3/7 md:h-72 lg:h-88">
+								<Image
+									src="/images/m41.jpg"
+									className="object-top"
+									layout="fill"
+									objectFit="cover"
+								/>
 							</div>
 							<div className="px-6 space-y-4 md:px-0 md:w-4/7">
 								<p className="font-bold">
@@ -96,13 +106,18 @@ const Home = () => {
 									where you can truly call yourself your best friend.
 								</p>
 							</div>
-							<div className="w-full mx-auto overflow-hidden md:shadow-sm h-80 md:w-3/7 md:h-80 lg:h-104">
-								<Image src="m31.jpg" className="object-left-top" />
+							<div className="relative w-full mx-auto overflow-hidden md:shadow-sm h-80 md:w-3/7 md:h-80 lg:h-104">
+								<Image
+									src="/images/m31.jpg"
+									className="object-left-top"
+									layout="fill"
+									objectFit="cover"
+								/>
 							</div>
 						</section>
 						<section className="flex flex-col items-center justify-between space-x-0 space-y-12 md:flex-row md:space-x-12 md:space-y-0">
-							<div className="w-full mx-auto overflow-hidden md:shadow-sm h-80 md:w-3/7 md:h-72 lg:h-96">
-								<Image src="m73.jpg" />
+							<div className="relative w-full mx-auto overflow-hidden md:shadow-sm h-80 md:w-3/7 md:h-72 lg:h-96">
+								<Image src="/images/m73.jpg" layout="fill" objectFit="cover" />
 							</div>
 							<div className="px-6 space-y-4 md:px-0 md:w-4/7">
 								<p className="font-bold">

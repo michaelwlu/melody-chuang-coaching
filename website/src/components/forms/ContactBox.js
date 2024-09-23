@@ -95,7 +95,7 @@ const ContactBox = () => {
 						maxLength={10000}
 						value={contactInfo.message}
 						onChange={updateField}
-						className="block w-full mt-2 text-sm bg-gray-100 border-opacity-50 border-themeblue-300 form-textarea"
+						className="block w-full p-2 mt-2 text-sm text-gray-700 bg-white border rounded-md border-themeblue-100 focus:border-themeblue-200 focus:outline-none focus:ring-2 focus:ring-themeblue-100 focus:ring-opacity-50"
 						rows="5"
 					/>
 				</div>
