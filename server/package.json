@@ -24,13 +24,13 @@
   "homepage": "https://github.com/michaelwlu/melodychuang.com#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.3",
-    "mongoose": "^5.13.20",
-    "nodemailer": "^6.6.1"
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "mongoose": "^8.6.3",
+    "nodemailer": "^6.9.15"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^3.1.7"
   }
 }
