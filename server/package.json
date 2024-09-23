@@ -27,7 +27,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.3",
     "mongoose": "^5.13.20",
-    "nodemailer": "^6.6.1"
+    "nodemailer": "^6.9.9"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
